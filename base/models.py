@@ -14,10 +14,8 @@ class Student(models.Model):
 
 class Product(models.Model):
     prodname = models.CharField(max_length=50)
-    proddesc = models.CharField(max_length=50)
-    prodprice = models.DecimalField(max_digits=3,decimal_places=0)
-    prodsize =  models.DecimalField(max_digits=3,decimal_places=0)
-    image = models.ImageField(null=True,blank=True,default='/placeholder.png')
+    description = models.CharField(max_length=50)
+    price = models.DecimalField(max_digits=3,decimal_places=0)
  
     def __str__(self):
            return self.prodname
